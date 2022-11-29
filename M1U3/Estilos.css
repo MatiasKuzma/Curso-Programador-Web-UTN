@@ -1,0 +1,36 @@
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+.destacar-argentina{
+    color:lightblue;
+    font-weight: bold;
+}
+
+
+.centrar-imagen{
+    max-width: 100%;
+}
+
+.formulario-contenedor{
+    background-color: blue;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.formulario-item{
+    background-color: lightblue;
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
