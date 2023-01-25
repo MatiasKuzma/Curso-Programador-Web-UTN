@@ -15,13 +15,15 @@ router.post('/', async (req, res, next) => {
   var comentario = req.body.comentario;
   var cv = req.body.cv;
 
+  
+
   var obj = {
     to: 'matias.kuzma@gmail.com',
     subject: 'Contacto desde formulario de trabajo',
-    html: "Hola " + nombre + " " + apellido + " se contacto porque decea trabajar con nosotros. Lo podes contactar a travez del mail: " + email + "<br> Ademas nos dejo el siguiente comentario: " + comentario + "<br> Y adjunto su CV para que lo tengas en cuenta.",
+    html: "Hola, " + nombre + " " + apellido + " se contacto porque desea trabajar con nosotros. Lo podes contactar a travez del mail: " + email + "<br> Ademas nos dejo el siguiente comentario: " + comentario + "<br> Y adjunto su CV para que lo tengas en cuenta.",
     // attachments: [{
     //   filename: 'cv.pdf',
-    //   path: 'file:'+ cv,
+    //   path: cv,
     //   contentType: 'application/pdf',
     // }]
   }
