@@ -10,6 +10,8 @@ var indexRouter = require('./routes/index');
 var formularioTrabajoRouter = require('./routes/formulario-trabajo')
 var usersRouter = require('./routes/users');
 var admLoginRouter = require('./routes/admin/login');
+var admConfiguracionesRouter = require('./routes/admin/configuraciones');
+var registroRouters = require('./routes/registro');
 
 var app = express();
 
@@ -27,6 +29,8 @@ app.use('/', indexRouter);
 app.use('/formulario-trabajo', formularioTrabajoRouter)
 app.use('/users', usersRouter);
 app.use('/admin/login', admLoginRouter);
+app.use('/admin/configuraciones', admConfiguracionesRouter);
+app.use('/registro', registroRouters);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
