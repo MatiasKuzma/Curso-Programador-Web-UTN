@@ -14,8 +14,6 @@ async function cargarUsuario(usuario, contraseña, nombre, apellido, dni, telefo
 
     
     
-// }
-
 async function validarDniUsuario(dni){
     try{
         var query= 'select * from users where dni = ? limit 1';

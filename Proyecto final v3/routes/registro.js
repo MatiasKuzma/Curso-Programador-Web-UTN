@@ -26,6 +26,12 @@ router.post('/', async(req, res, next) =>{
   {
     var data = await registroModel.cargarUsuario(usuario, contraseña, nombre, apellido, dni, telefono);
     console.log(data)
+    res.render('registro',{
+      layout: 'layout',
+      error: false
+    })
+
+    
   }
   else {
     res.render('registro',{
