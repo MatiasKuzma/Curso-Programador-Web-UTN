@@ -1,4 +1,9 @@
 <div style="padding-left: 35%; padding-top: 5%">
+  {{#if error}}
+<p style="color: red; padding-left: 10%">{{message}}</p>
+{{else}}
+<p style="color: green; padding-left: 10%">{{message}}</p>
+{{/if}}
 <form class="row g-3 caja-registro" action="/registro" method="post">
   <div class="col-md-6">
     <label for="usuario" class="form-label">Usuario</label>
@@ -31,8 +36,4 @@
 
 </div>
 
-{{#if error}}
-<p style="color: red; text-aling: center">DNI ya registrado</p>
-{{else}}
-<script>window.alert("Registro exitoso")</script>
-{{/if}}
+

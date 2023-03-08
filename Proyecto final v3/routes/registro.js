@@ -26,17 +26,18 @@ router.post('/', async(req, res, next) =>{
   {
     var data = await registroModel.cargarUsuario(usuario, contraseña, nombre, apellido, dni, telefono);
     console.log(data)
-    res.render('registro',{
+    res.render('registro' ,{
       layout: 'layout',
-      error: false
+      message: "Usuario creado exitosamente"
     })
-
-    
   }
   else {
     res.render('registro',{
       layout: 'layout',
-      error: true
+      error: true,
+      message: "Ya existe un usuario con ese DNI"
+      
+      
     })
   }
   }
