@@ -1,4 +1,5 @@
-<form action="/admin/login" method="post">
+<div style="padding-left: 35%; padding-top: 5%">
+<form class="caja-registro"action="/admin/login" method="post">
     <div class="cuadro-login">
   <div class="mb-3">
     <label for="usuario" class="form-label">Usuario</label>
@@ -13,7 +14,7 @@
     </div>
 
 </form>
-
+</div>
 {{#if error}}
 <p style="color: red; text-aling: center">Usuario o contraseña incorrectos</p>
 {{/if}}

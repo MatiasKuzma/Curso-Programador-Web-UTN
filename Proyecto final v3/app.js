@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+var session = require('express-session')
 
 var indexRouter = require('./routes/index');
 var formularioTrabajoRouter = require('./routes/formulario-trabajo')
@@ -25,11 +26,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'p4kk4l40d05kdof829dkr0',
+  resave: false,
+  saveUninitialized: true
+}))
+
+secured = async (req, res, next) => {
+  try{
+    console.log(req.session.id_usuario);
+    if(req.session.id_usuario){
+      next();
+    }
+    else{
+      res.redirect('login')
+    }
+  }catch (error){
+console.log(error)
+  }
+}
+
 app.use('/', indexRouter);
 app.use('/formulario-trabajo', formularioTrabajoRouter)
 app.use('/users', usersRouter);
 app.use('/admin/login', admLoginRouter);
-app.use('/admin/configuraciones', admConfiguracionesRouter);
+app.use('/admin/configuraciones',secured, admConfiguracionesRouter);
 app.use('/registro', registroRouters);
 
 // catch 404 and forward to error handler

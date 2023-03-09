@@ -18,6 +18,7 @@ router.post('/', async(req, res, next) =>{
     var data = await administratorsModel.getUserAndPassword(usuario, password);
 console.log(data)
 if (data != undefined){
+    req.session.id_usuario = data.id;
     res.redirect('/admin/configuraciones')
 }
 else{
