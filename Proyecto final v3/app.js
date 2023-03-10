@@ -13,6 +13,8 @@ var usersRouter = require('./routes/users');
 var admLoginRouter = require('./routes/admin/login');
 var admConfiguracionesRouter = require('./routes/admin/configuraciones');
 var registroRouters = require('./routes/registro');
+var userLoginRouter = require('./routes/user/login');
+var userHomeRouter = require('./routes/user/home');
 
 var app = express();
 
@@ -52,6 +54,8 @@ app.use('/users', usersRouter);
 app.use('/admin/login', admLoginRouter);
 app.use('/admin/configuraciones',secured, admConfiguracionesRouter);
 app.use('/registro', registroRouters);
+app.use('/user/login', userLoginRouter);
+app.use('/user/home',secured, userHomeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
