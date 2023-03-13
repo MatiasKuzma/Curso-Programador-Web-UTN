@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-    res.render('user/home',{
+    res.render('./index',{
       layout: 'user/layout',
     });
   });
