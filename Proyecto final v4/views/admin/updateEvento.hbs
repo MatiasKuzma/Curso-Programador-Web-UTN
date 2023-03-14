@@ -1,0 +1,31 @@
+<h2 style="padding-left: 40%;padding-top: 3%;">Modificar evento</h2>
+<div style="padding-left: 35%; padding-top: 2%;">
+    {{#if error}}
+    <p style="color: red; padding-left: 10%">{{message}}</p>
+    {{else}}
+    <p style="color: green; padding-left: 10%">{{message}}</p>
+    {{/if}}
+    <form class="row g-3 caja-registro" action="/admin/configuraciones/updateEvento" method="post"
+        enctype="multipart/form-data">
+        <input type="hidden" value="{{evento.id}}" name="id">
+        <div class="col-md-12">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" value="{{evento.titulo}}">
+        </div>
+        <div class="col-md-12">
+            <label for="cuerpo" class="form-label">Cuerpo</label>
+            <textarea type="text" class="form-control" id="cuerpo" name="cuerpo">{{evento.cuerpo}}</textarea>
+        </div>
+
+            <p>
+                <label>Imagen:   <input class="form-control" type="file" id="imagen" name="imagen"></label>
+            </p>
+                <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar la imagen actual?</label>
+                <input type="hidden" name="img_original" value="{{evento.img_id}}">
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+    </form>
+
+</div>

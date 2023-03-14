@@ -1,0 +1,25 @@
+<div style="padding-left: 35%; padding-top: 5%">
+  {{#if error}}
+  <p style="color: red; padding-left: 10%">{{message}}</p>
+  {{else}}
+  <p style="color: green; padding-left: 10%">{{message}}</p>
+  {{/if}}
+  <form class="row g-3 caja-registro" action="/admin/configuraciones/uploadEvento" method="post" enctype="multipart/form-data">
+    <div class="col-md-12">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" class="form-control" id="titulo" name="titulo">
+    </div>
+    <div class="col-md-12">
+      <label for="cuerpo" class="form-label">Cuerpo</label>
+      <textarea type="text" class="form-control" id="cuerpo" name="cuerpo"></textarea>
+    </div>
+    <div class="mb-3">
+  <label for="imagen" class="form-label">Subir una imagen del evento</label>
+  <input class="form-control" type="file" id="imagen" name="imagen">
+</div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Subir evento</button>
+    </div>
+  </form>
+
+</div>

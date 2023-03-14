@@ -1,0 +1,42 @@
+<div style="padding-left: 35%; padding-top: 5%">
+      {{#if error}}
+  <p style="color: red; padding-left: 10%">{{message}}</p>
+  {{else}}
+  <p style="color: green; padding-left: 10%">{{message}}</p>
+  {{/if}}
+<form class="row g-3 caja-registro" style="padding-left: 8px; padding-right: 8px;" action="/formulario-trabajo" method="post"
+enctype="multipart/form-data">
+    <h2 style="padding: 10px;">Trabajá con nosotros</h2>
+    <div class="row" style="padding-bottom: 8px; padding-top: 8px;">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombre" name="nombre">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" id="apellido"
+                name="apellido">
+        </div>
+
+    </div>
+    <div class="row" style="padding-right: 8px;">
+        <div class="col">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nombre@dominio.com">
+        </div>
+    </div>
+    <div class="row" style="padding-left: 8px;">
+        <div class="col">
+            <label class="form-label">Comentario</label>
+            <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="row" style="padding-left: 8px;">
+        <div class="col">
+            <label class="form-label">Envianos tu curriculum</label>
+            <input class="form-control" type="file" id="archivo" name="archivo">
+        </div>
+    </div>
+    <div class="col-12">
+    <button class="btn btn-primary" type="submit">Enviar </button>
+  </div>
+</form>
+</div>
