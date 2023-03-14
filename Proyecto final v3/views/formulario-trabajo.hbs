@@ -1,5 +1,11 @@
 <div style="padding-left: 35%; padding-top: 5%">
-<form class="row g-3 caja-registro" style="padding-left: 8px; padding-right: 8px;" action="/formulario-trabajo" method="post">
+      {{#if error}}
+  <p style="color: red; padding-left: 10%">{{message}}</p>
+  {{else}}
+  <p style="color: green; padding-left: 10%">{{message}}</p>
+  {{/if}}
+<form class="row g-3 caja-registro" style="padding-left: 8px; padding-right: 8px;" action="/formulario-trabajo" method="post"
+enctype="multipart/form-data">
     <h2 style="padding: 10px;">Trabajá con nosotros</h2>
     <div class="row" style="padding-bottom: 8px; padding-top: 8px;">
         <div class="col">
@@ -26,12 +32,11 @@
     <div class="row" style="padding-left: 8px;">
         <div class="col">
             <label class="form-label">Envianos tu curriculum</label>
-            <input class="form-control" type="file" id="cv" name="cv">
+            <input class="form-control" type="file" id="archivo" name="archivo">
         </div>
     </div>
     <div class="col-12">
-    <button class="btn btn-primary" type="submit">Enviar</button>
+    <button class="btn btn-primary" type="submit">Enviar </button>
   </div>
 </form>
-<p style="padding: 10px; color:green;">{{message}}</p>
 </div>

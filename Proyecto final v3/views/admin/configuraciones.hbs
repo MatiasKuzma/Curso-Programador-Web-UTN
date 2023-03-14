@@ -1,5 +1,6 @@
 <div style="padding-top: 1%;padding-right: 1%; float: right;">
-    <a type="button" href="/admin/login/logout" class="btn btn-outline-danger">Cerrar sesión</a>
+    <a type="button" href="/admin/login/logout" class="btn btn-outline-danger"><i
+            class="fa-sharp fa-solid fa-right-to-bracket"></i> Cerrar sesión</a>
 </div>
 
 {{!-- inicio tabla de usuarios --}}
@@ -39,24 +40,26 @@
 
 {{!-- inicio tabla de eventos --}}
 <h2 style="padding-top: 2%; padding-left: 2%;">Tabla de eventos</h2>
+<a type="button" class="btn btn-success" href="/admin/configuraciones/uploadEvento" style="float: right;"><i class="fa-sharp fa-solid fa-plus"></i> Nuevo
+    evento</a>
 <div class="tablas">
     <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Usuario</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
+                <th scope="col">Título</th>
+                <th scope="col">Cuerpo</th>
+                <th scope="col">Imagen</th>
                 <th scope="col" class="text-right">Acciones</th>
             </tr>
         </thead>
-        {{#each usuarios}}
+        {{#each eventos}}
         <tbody>
             <tr>
                 <th scope="row">{{id}}</th>
-                <td>{{user}}</td>
-                <td>{{nombre}}</td>
-                <td>{{apellido}}</td>
+                <td>{{titulo}}</td>
+                <td>{{cuerpo}}</td>
+                <td>{{{imagen}}}</td>
                 <td class="text-right">
                     <a href="/admin/configuraciones/updateEvento/{{id}}" class="btn btn-secondary"><i
                             class="fas fa-pencil-alt"></i></a>

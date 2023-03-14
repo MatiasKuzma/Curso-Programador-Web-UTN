@@ -1,85 +1,92 @@
-    <!-- Inicio Carousel -->
-    <a name="instalaciones"></a>
-    <div class="container-fluid">
+<!-- Inicio Carousel -->
+<a name="instalaciones"></a>
+<div class="container-fluid">
 
 
-        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/cancha 2.jpg" class="d-block w-100" alt="cancha" width="150px" height="500px">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/cancha.jpg" class="d-block w-100" alt="cancha">
-                </div>
-                <div class="carousel-item ">
-                    <img src="/images/complejo.jpg" class="d-block w-100" alt="complejo">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/futbol tenis.jpg" class="d-block w-100" alt="futbol tenis">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/torneo.jpg" class="d-block w-100" alt="torneo">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/images/cancha 2.jpg" class="d-block w-100" alt="cancha" width="150px" height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/cancha.jpg" class="d-block w-100" alt="cancha">
+      </div>
+      <div class="carousel-item ">
+        <img src="/images/complejo.jpg" class="d-block w-100" alt="complejo">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/futbol tenis.jpg" class="d-block w-100" alt="futbol tenis">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/torneo.jpg" class="d-block w-100" alt="torneo">
+      </div>
     </div>
-    <!-- Fin Carousel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</div>
+<!-- Fin Carousel -->
 {{!-- Inicio eventos --}}
 <a name="eventos"></a>
-<div style="padding: 5%; background-color:rgb(45, 47, 49);">
-   <div class="card placeholder col-2">
-  <img src="..." class="card-img-top" alt="...">
 
+  <div class="container-fluid row align-items-start" style=" background-color:rgb(45, 47, 49);">
+  {{#each eventos}}
+  <div class="mb-3" style="padding-left: 5%; padding-top:2%; padding-bottom:1%;">
+  <div class="card" style="width: 18rem; background-color:rgb(45, 47, 49); border: 1px solid #8f8f8f;">
+  <img src="{{imagen}}" class="card-img-top" >
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    
+    <h5 class="card-title">{{titulo}}</h5>
+    <p class="card-text">{{cuerpo}}</p>
   </div>
-</div> 
 </div>
+  </div>
 
+{{/each}}
+</div>
 
 {{!-- Fin eventos --}}
 <!-- Columnas de contacto -->
 <a name="contacto"></a>
 <div class="container text-center">
-    <div class="row align-items-start">
-        <div class="card text-bg-dark mb-3" style="max-width: 33%; border: none;">
-            <div class="card-header" style="border-width: 1.5px;"><strong> CONTACTO</strong></div>
-            <div class="card-body">
-              
-              <p class="card-text"><strong>Tel:</strong><span style="color: lightgray;"> 011 1111 1111</span>  <br>
-            <strong>Cel:</strong><span style="color: lightgray;"> 15 1111 1111</span> <br>
-        <strong>Email:</strong> <a href="mailto:info@tercertiempo.com.ar" style="color: lightgray;">info@tercertiempo.com.ar</a></p>
-            </div>
-          </div>
-          <div class="card text-bg-dark mb-3" style="max-width: 33%; border: none;">
-            <div class="card-header" style="border-width: 1.5px;"><strong>UBICACIÓN</strong> </div>
-            <div class="card-body">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3856433809747!2d-58.37556788311758!3d-34.67021521511133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3334b39d33bdd%3A0xdb9a534cc563fa7!2sLibertadores%20de%20Am%C3%A9rica%20-%20Ricardo%20Enrique%20Bochini!5e0!3m2!1ses!2sar!4v1672792859370!5m2!1ses!2sar" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <p class="card-text">Ricardo Enrique Bochini 751, Avellaneda, Provincia de Buenos Aires</p>
-            </div>
-          </div>
-          <div class="card text-bg-dark mb-3" style="max-width: 33%; border: none;">
-            <div class="card-header" style="border-width: 1.5px;"><strong>HORARIOS</strong> </div>
-            <div class="card-body">
-              
-              <p class="card-text">Lunes a Viernes <br>
-            <span style="color: lightgray;">9:00 a 19:00</span> <br>
-            Sábados y Domingos <br>
-        <span style="color: lightgray;">9:00 a 21:00</span></p>
-            </div>
-          </div>
+  <div class="row align-items-start">
+    <div class="card text-bg-dark mb-3" style="max-width: 33%; border: none;">
+      <div class="card-header" style="border-width: 1.5px;"><strong> CONTACTO</strong></div>
+      <div class="card-body">
+
+        <p class="card-text"><strong>Tel:</strong><span style="color: lightgray;"> 011 1111 1111</span> <br>
+          <strong>Cel:</strong><span style="color: lightgray;"> 15 1111 1111</span> <br>
+          <strong>Email:</strong> <a href="mailto:info@tercertiempo.com.ar"
+            style="color: lightgray;">info@tercertiempo.com.ar</a>
+        </p>
+      </div>
+    </div>
+    <div class="card text-bg-dark mb-3" style="max-width: 33%; border: none;">
+      <div class="card-header" style="border-width: 1.5px;"><strong>UBICACIÓN</strong> </div>
+      <div class="card-body">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3856433809747!2d-58.37556788311758!3d-34.67021521511133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3334b39d33bdd%3A0xdb9a534cc563fa7!2sLibertadores%20de%20Am%C3%A9rica%20-%20Ricardo%20Enrique%20Bochini!5e0!3m2!1ses!2sar!4v1672792859370!5m2!1ses!2sar"
+          width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="card-text">Ricardo Enrique Bochini 751, Avellaneda, Provincia de Buenos Aires</p>
+      </div>
+    </div>
+    <div class="card text-bg-dark mb-3" style="max-width: 33%; border: none;">
+      <div class="card-header" style="border-width: 1.5px;"><strong>HORARIOS</strong> </div>
+      <div class="card-body">
+
+        <p class="card-text">Lunes a Viernes <br>
+          <span style="color: lightgray;">9:00 a 19:00</span> <br>
+          Sábados y Domingos <br>
+          <span style="color: lightgray;">9:00 a 21:00</span>
+        </p>
+      </div>
     </div>
   </div>
+</div>
 <!-- Fin columnas de contacto -->
