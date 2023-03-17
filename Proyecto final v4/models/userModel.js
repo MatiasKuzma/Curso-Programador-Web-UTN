@@ -34,13 +34,33 @@ async function updateUserById(obj, id) {
     try {
         var query = 'update users set ? where id=?'
         var rows = await pool.query(query, [obj, id]);
-        console.log(rows)
         return rows;
     }
     catch (error) {
         throw error;
     }
-
 }
 
-module.exports = { getUserAndPassword, getUsuarios, deleteUserById, getUserById, updateUserById };
+async function getPasswordById(id){
+    try{
+        var query = 'select password from users where id = ?'
+        var rows = await pool.query(query,[id]);
+        return rows[0];
+    }
+    catch (error){
+        throw error;
+    }
+}
+
+async function updatePasswordById(id, password){
+    try{
+        var query = 'update users set password = ? where id = ?'
+        var rows = await pool.query(query, [md5(password), id]);
+        return rows;
+    }
+    catch (error){
+        throw error;
+    }
+}
+
+module.exports = { getUserAndPassword, getUsuarios, deleteUserById, getUserById, updateUserById, getPasswordById, updatePasswordById };

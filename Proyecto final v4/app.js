@@ -16,6 +16,7 @@ var admConfiguracionesRouter = require('./routes/admin/configuraciones');
 var registroRouters = require('./routes/registro');
 var userLoginRouter = require('./routes/user/login');
 var userHomeRouter = require('./routes/user/home');
+var userCambioPassRouter = require('./routes/user/cambioPass');
 
 var app = express();
 
@@ -62,6 +63,7 @@ app.use('/admin/configuraciones',secured, admConfiguracionesRouter);
 app.use('/registro', registroRouters);
 app.use('/user/login', userLoginRouter);
 app.use('/user/home',secured, userHomeRouter);
+app.use('/user/cambioPass', secured, userCambioPassRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,26 @@
+<div style="padding-left: 35%; padding-top: 5%">
+    {{#if error}}
+    <p style="color: red; padding-left: 10%">{{message1}}</p>
+    <p style="color: red; padding-left: 10%">{{message2}}</p>
+    {{else}}
+    <p style="color: green; padding-left: 10%">{{message1}}</p>
+    {{/if}}
+    <form class="row g-3 caja-registro" action="/user/cambioPass" method="post">
+        <div class="col-md-12">
+            <label for="contraseñaAnterior" class="form-label">Contraseña anterior</label>
+            <input type="password" class="form-control" id="contraseñaAnterior" name="contraseñaAnterior">
+        </div>
+        <div class="col-md-12">
+            <label for="contraseñaNueva" class="form-label">Contraseña nueva</label>
+            <input type="password" class="form-control" id="contraseñaNueva" name="contraseñaNueva">
+        </div>
+        <div class="col-md-12">
+            <label for="contraseñaNuevaConfir" class="form-label">Confirmar la nueva contraseña</label>
+            <input type="password" class="form-control" id="contraseñaNuevaConfir" name="contraseñaNuevaConfir">
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
+        </div>
+    </form>
+
+</div>

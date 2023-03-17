@@ -35,22 +35,21 @@
 {{!-- Inicio eventos --}}
 <a name="eventos"></a>
 
-  <div class="container-fluid row align-items-start" style=" background-color:rgb(45, 47, 49);">
+<div class="row  row-cols-md-4 g-0" style="background-color:rgb(45, 47, 49); display: flex; justify-content: center;">
   {{#each eventos}}
-  <div class="mb-3" style="padding-left: 5%; padding-top:2%; padding-bottom:1%;">
-  <div class="card" style="width: 18rem; background-color:rgb(45, 47, 49); border: 1px solid #8f8f8f;">
-  <img src="{{imagen}}" class="card-img-top" >
-  <div class="card-body">
-    <h5 class="card-title">{{titulo}}</h5>
-    <p class="card-text">{{cuerpo}}</p>
+  <div class="col"style="padding:1% ">
+    <div class="card h-100" style="background-color:rgb(45, 47, 49); border: 1px solid #8f8f8f;">
+      <img src="{{imagen}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <p class="card-text">{{cuerpo}}</p>
+      </div>
+    </div>
   </div>
+  {{/each}}
 </div>
-  </div>
-
-{{/each}}
-</div>
-
 {{!-- Fin eventos --}}
+
 <!-- Columnas de contacto -->
 <a name="contacto"></a>
 <div class="container text-center">
